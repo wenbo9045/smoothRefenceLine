@@ -3,7 +3,6 @@
 //
 #include "ipopt_steer_limit_smoother.h"
 
-#include "../../common/math_util.h"
 #include "Eigen/Dense"
 
 #define tag_f 1
@@ -14,12 +13,6 @@
 #define weight_smooth 1.0e5
 #define weight_distance 1.0e3
 #define kappa_bound 0.2
-
-using namespace xpilot::reference_line::math;
-
-namespace xpilot {
-namespace reference_line {
-namespace smoother {
 
 /* Constructor. */
 SteerLimitIpoptInterface::SteerLimitIpoptInterface(const std::vector<ReferencePoint_T>& ref_points) {
@@ -306,9 +299,3 @@ void SteerLimitIpoptInterface::generate_tapes(int n, int m, int* nnz_jac_g, int*
   sparse_hess(tag_L, n, 0, &xp[0], &nnz_L_, &rind_L_, &cind_L_, &hessval_, options_L_);
   *nnz_h_lag = nnz_L_;
 }
-
-std::vector<ReferencePoint_T> SteerLimitIpoptInterface::send_smooth_points() { return this->smooth_points_; }
-
-}  // namespace smoother
-}  // namespace reference_line
-}  // namespace xpilot
