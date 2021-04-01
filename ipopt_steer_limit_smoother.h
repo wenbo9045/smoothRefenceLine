@@ -21,9 +21,7 @@
 class SteerLimitIpoptInterface : public Ipopt::TNLP {
  public:
   /** default constructor */
-  SteerLimitIpoptInterface(const std::vector<ReferencePoint_T> &ref_points);
-
-  std::vector<ReferencePoint_T> send_smooth_points();
+  SteerLimitIpoptInterface(const std::vector<ReferencePoint_T> &ref_points);;
 
   /** default destructor */
   virtual ~SteerLimitIpoptInterface() = default;
