@@ -6,7 +6,6 @@
 
 #include <tuple>
 
-#include "../../../common/Rte_AP_REFERENCE_POINT_Types.h"
 #include "adolc/adolc.h"
 #include "adolc/adolc_sparse.h"
 #include "adolc/adouble.h"
@@ -18,10 +17,6 @@
 #include "coin/IpTNLP.hpp"
 #include "coin/IpTNLPAdapter.hpp"
 #include "coin/IpTypes.hpp"
-
-namespace xpilot {
-namespace reference_line {
-namespace smoother {
 
 class SteerLimitIpoptInterface : public Ipopt::TNLP {
  public:
@@ -126,6 +121,3 @@ class SteerLimitIpoptInterface : public Ipopt::TNLP {
   std::vector<ReferencePoint_T> ref_points_;
   std::vector<ReferencePoint_T> smooth_points_;
 };
-}  // namespace smoother
-}  // namespace reference_line
-}  // namespace xpilot
