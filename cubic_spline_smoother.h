@@ -5,9 +5,6 @@
 #include <vector>
 #include "../../../common/Rte_AP_REFERENCE_POINT_Types.h"
 
-namespace xpilot {
-namespace reference_line {
-namespace smoother {
 
 class CubicSplineSmoother{
 
@@ -53,7 +50,3 @@ private:
     std::array<double, 10> gauss_point_weights_;
 
 };
-
-}
-}
-}
