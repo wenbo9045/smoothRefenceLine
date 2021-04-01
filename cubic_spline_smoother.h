@@ -3,8 +3,6 @@
 #include <cmath>
 #include <array>
 #include <vector>
-#include "../../../common/Rte_AP_REFERENCE_POINT_Types.h"
-
 
 class CubicSplineSmoother{
 
