@@ -4,8 +4,6 @@
 
 #include <iostream>
 
-using namespace xpilot::reference_line::smoother;
-
 CubicSplineSmoother::CubicSplineSmoother(const std::vector<ReferencePoint_T> &ref_points)
 {
     ref_points_ = ref_points;
@@ -216,8 +214,4 @@ double CubicSplineSmoother::spline_length_calc(const double a0, const double a1,
         total_length += 0.5 * (upper - lower) * gauss_point_weights_[i] * std::hypot(dx, dy);
     }
     return total_length;
-}
-
-std::vector<ReferencePoint_T> CubicSplineSmoother::send_smooth_points() {
-    return this->smooth_points_;
 }
