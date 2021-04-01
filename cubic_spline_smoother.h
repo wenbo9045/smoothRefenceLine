@@ -22,7 +22,6 @@ public:
     CubicSplineSmoother(const std::vector<ReferencePoint_T> &ref_points);
     ~CubicSplineSmoother() = default;
     void smooth();
-    std::vector<ReferencePoint_T> send_smooth_points();
 
 private:
     std::vector<ReferencePoint_T> g2_continuity_connect_by_poly(const double x0,
